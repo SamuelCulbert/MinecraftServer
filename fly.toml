@@ -1,7 +1,6 @@
 app = "MinecraftServer"
 primary_region = "sin"
 
-# Fly auto-detects Dockerfile — no [build] needed
 [env]
   JAVA_TOOL_OPTIONS = "-Xmx256M -Xms256M"
 
