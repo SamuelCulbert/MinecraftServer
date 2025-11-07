@@ -1,9 +1,9 @@
-app = "MinecraftServer"
+app = "minecraft-server-samuel"
+primary_region = "sin"
 
-primary_region = "sin"  # or change to "iad", "fra", etc.
-
-[build]
-  dockerfile = "Dockerfile"
+# ❌ Remove or comment out this section:
+# [build]
+#   dockerfile = "Dockerfile"
 
 [env]
   JAVA_TOOL_OPTIONS = "-Xmx1024M -Xms1024M"
@@ -12,8 +12,8 @@ primary_region = "sin"  # or change to "iad", "fra", etc.
   internal_port = 25565
   protocol = "tcp"
   auto_start_machines = true
-  min_machines_running = 1
   auto_stop_machines = false
+  min_machines_running = 1
 
   [[services.ports]]
     port = 25565
