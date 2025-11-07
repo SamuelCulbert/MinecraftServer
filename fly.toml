@@ -1,0 +1,19 @@
+app = "minecraft-server-samuel"
+primary_region = "sin" # Singapore or your nearest region
+
+[build]
+  dockerfile = "Dockerfile"
+
+[env]
+  JAVA_TOOL_OPTIONS = "-Xmx1024M -Xms1024M"
+
+[[services]]
+  internal_port = 25565
+  protocol = "tcp"
+  auto_stop_machines = false
+  auto_start_machines = true
+  min_machines_running = 1
+
+  [[services.ports]]
+    handlers = ["tls", "http"]
+    port = 25565
