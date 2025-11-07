@@ -1,12 +1,9 @@
-app = "minecraft-server-samuel"
+app = "MinecraftServer"
 primary_region = "sin"
 
-# ❌ Remove or comment out this section:
-# [build]
-#   dockerfile = "Dockerfile"
-
+# Fly auto-detects Dockerfile — no [build] needed
 [env]
-  JAVA_TOOL_OPTIONS = "-Xmx1024M -Xms1024M"
+  JAVA_TOOL_OPTIONS = "-Xmx256M -Xms256M"
 
 [[services]]
   internal_port = 25565
