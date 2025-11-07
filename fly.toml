@@ -1,4 +1,5 @@
-app = "fly-minecraft-12110"
+app = "MinecraftServer"
+
 primary_region = "sin"  # or change to "iad", "fra", etc.
 
 [build]
