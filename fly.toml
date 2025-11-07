@@ -1,8 +1,11 @@
-app = "fly-minecraft-samuel"
-primary_region = "sin"  # Change to your closest region
+app = "fly-minecraft-12110"
+primary_region = "sin"  # or change to "iad", "fra", etc.
 
 [build]
   dockerfile = "Dockerfile"
+
+[env]
+  JAVA_TOOL_OPTIONS = "-Xmx1024M -Xms1024M"
 
 [[services]]
   internal_port = 25565
