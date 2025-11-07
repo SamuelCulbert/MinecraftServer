@@ -1,19 +1,15 @@
-app = "minecraft-server-samuel"
-primary_region = "sin" # Singapore or your nearest region
+app = "fly-minecraft-samuel"
+primary_region = "sin"  # Change to your closest region
 
 [build]
   dockerfile = "Dockerfile"
 
-[env]
-  JAVA_TOOL_OPTIONS = "-Xmx1024M -Xms1024M"
-
 [[services]]
   internal_port = 25565
   protocol = "tcp"
-  auto_stop_machines = false
   auto_start_machines = true
   min_machines_running = 1
+  auto_stop_machines = false
 
   [[services.ports]]
-    handlers = ["tls", "http"]
     port = 25565
